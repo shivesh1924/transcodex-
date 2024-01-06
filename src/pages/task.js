@@ -73,6 +73,7 @@ const App = () => {
   };
 
   const deleteTask = async (taskId) => {
+    console.log("id");
     try {
       await axios.delete(`${dataUrl}/${taskId}`);
       const updatedTasks = tasks.filter((task) => task.id !== taskId);
